@@ -24,7 +24,6 @@ footer {
   .ul-Style {
     display: none;
   }
-
 }
 
 .ul-Style ul {
@@ -65,7 +64,7 @@ footer {
   /*que el efecto del borde se note*/
   border-radius: 200px;
   /*Cero px en X, cero px en y, 20px de resplandor y un color blanco al final*/
-  box-shadow: 0px 0px 40px rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px rgb(255, 255, 255);
   /*la propiedad de la amigación, le da la escala y la rotación*/
   -webkit-transform: scale(1.25) rotate(360deg);
 }
@@ -82,4 +81,78 @@ ul {
 .img-opacidad {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.329)
+}
+
+.icon-float {
+  float: left;
+  width: 12vw;
+}
+
+.navbar-color {
+  background-color: rgb(155, 119, 103);
+
+}
+
+
+
+.container-1 {
+  /*background-color: rgba(240, 192, 170, 0.6);*/
+  background-color: #95c5c8b9;
+  border-radius: 10px;
+  padding-left: 8px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-right: 8px;
+  margin: 0px auto;
+
+}
+
+.containerFondo {
+  width: 98%;
+  background-image: url(../Multimedia/Fondo2.png);
+  /* background-size: cover;*/
+  background-attachment: fixed;
+  /*background-repeat: no-repeat;*/
+  background-position: center;
+  padding-left: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+  margin: 0px auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.boton:hover {
+  color: #fff !important;
+  background-color: #386E72 !important;
+  border-color: #386E72 !important;
+}
+
+.boton {
+  display: inline-block;
+  font-weight: 400;
+  color: #495057;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+li a {
+  font-weight: 450 !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.titulos {
+  text-shadow: rgba(255, 255, 255, 0.459) 3px 3px, 0 0 1em white, 0 0 0.5em white;
 }
