@@ -1,0 +1,155 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Registro</title>
+     <link rel="stylesheet" href="./css/estilos.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+
+ </head>
+
+ <body>
+     <div class="containerFondo">
+         <div class="containerFondoOpacidad">
+             <div class="container">
+                 <h1 class="text-center titulos">Registrar Usuario</h1>
+                 <div class="row justify-content-center">
+                     <div class="col-lg-8">
+                         <div class="card">
+                             <div class="card-body">
+                                 <div id="register-alert" class="alert alert-danger" role="alert" hidden></div>
+
+                                 <form action="./index.html" id="register" name="register"
+                                     onsubmit="return enviarDatos()">
+
+                                     <div class="form-row">
+                                         <div class="form-group col-md-6">
+                                             <label for="name">Nombre</label>
+                                             <input type="text" class="form-control" id="name" required>
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label for="lastName">Apellido</label>
+                                             <input type="text" class="form-control" id="lastName" required>
+                                         </div>
+                                     </div>
+
+
+                                     <div class="form-row">
+                                         <div class="form-group col-md-6">
+                                             <label for="email">Email</label>
+                                             <input type="email" class="form-control" id="email" placeholder="Email"
+                                                 required autofocus>
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label for="password">Password</label>
+                                             <input type="password" class="form-control" id="password"
+                                                 placeholder="Password" required minlength="8">
+                                             <small class="form-text text-muted">Su contraseña debe tener al menos 8
+                                                 caracteres*</small>
+                                         </div>
+                                     </div>
+                                     <div class="form-row py-2">
+                                         <div class="form-group col-md-3">
+                                             <label for="gendre">Género:</label>
+                                             <select class="form-control" id="gendre" required>
+                                                 <option value="male" selected>Masculino</option>
+                                                 <option value="female">Femenino</option>
+                                                 <option value="other">Otro</option>
+                                             </select>
+                                         </div>
+                                         <div class="form-group col-md-5">
+                                             <label for="birthdate">Fecha Nacimiento</label>
+                                             <input type="date" class="form-control" id="birthdate" required>
+                                         </div>
+                                         <div class="form-group col-md-4">
+                                             <label for="tel">Telefono</label>
+                                             <input class="form-control" type="number" id="tel" min="0" maxlength="10"
+                                                 required>
+                                         </div>
+                                         <!--      VALIDANDO CODIGO     -->
+
+                                         <div class="col-md-6 mb-3">
+                                             <label for="Ciudad">Ciudad</label>
+                                             <select class="custom-select" id="Ciudad" required>
+                                                 <option selected disabled value="">Buscar...</option>
+                                                 <option value="Bogotá">Bogota</option>
+                                                 <option value="Acacías">Acacías</option>
+                                                 <option value="Cachipae">Cachipae</option>
+                                                 <option value="Girardot">Girardot</option>
+                                             </select>
+                                             <div class="invalid-tooltip">
+                                                 Please select a valid state.
+                                             </div>
+                                         </div>
+
+
+                                         <div class="col-md-3 mb-3">
+                                             <label for="Departamento">Departamento</label>
+                                             <select class="custom-select" id="Departamento" required>
+                                                 <option selected disabled value="">Buscar...</option>
+                                                 <option value="Cundinamarca">Cundinamarca</option>
+                                                 <option value="Meta">Meta</option>
+                                                 <option value="Caldas">Caldas</option>
+                                                 <option value="Casanare">Casanare</option>
+                                             </select>
+                                             <div class="invalid-tooltip">
+                                                 Please select a valid state.
+                                             </div>
+                                         </div>
+                                     </div>
+
+
+                                     <!--      TERMINANDO CODIGO    -->
+                             </div>
+
+                             <div class="form-group col-md-12">
+                                 <label for="file">Agregar Foto de Perfil</label>
+                                 <input type="file" class="form-control-file btn btn-dark col-md-7
+                                 id=" exampleFormControlFile1">
+                             </div>
+
+
+
+                             <div class="form-group py-2">
+                                 <div class="form-check text-center">
+                                     <input class="form-check-input" type="checkbox" id="checkTerminos">
+                                     <label class="form-check-label" for="checkTerminos">
+                                         Acepto <a href="#" class="btn-link" data-toggle="modal"
+                                             data-target="#terminos">Terminos y Condiciones</a>
+                                     </label>
+                                 </div>
+                             </div>
+
+                             <div class="text-center">
+                                 <button type="submit" class="btn btn-dark w-75 boton">Sign Up</button>
+                             </div>
+                             <div class="text-muted text-center pt-3">
+                                 Ya tienes cuénta ? <a href="./sesion.html">inicia sesión</a>
+                             </div>
+                             </form>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+         </div>
+     </div>
+
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+     </script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+     </script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+     </script>
+
+ </body>
+
+ </html>

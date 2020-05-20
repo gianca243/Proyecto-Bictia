@@ -60,6 +60,7 @@ li a {
 
 .centrar {
   justify-content: center;
+  justify-items: center;
   align-items: center;
 }
 
@@ -142,14 +143,13 @@ footer {
 /************** CONTENEDORES  *************/
 .container-1 {
   /*background-color: rgba(240, 192, 170, 0.6);*/
-  background-color: #ffffffc4;
+  background-color: #ffffffe3;
   border-radius: 10px;
   padding-left: 8px;
   padding-top: 1px;
   padding-bottom: 1px;
   padding-right: 8px;
-  margin: 0px auto;
-
+  margin: 10px;
 }
 
 .containerFondo {
@@ -166,4 +166,15 @@ footer {
   margin: 0px auto;
   justify-items: center;
   align-items: center;
+  justify-content: space-between;
+
+}
+
+.containerFondoOpacidad {
+  background-color: rgba(155, 119, 103, 0.514);
+  margin: 0;
+  padding: 0px 0px 0px 0px;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
 }
