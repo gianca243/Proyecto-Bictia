@@ -107,6 +107,12 @@ ul {
     background-color: #495057;
 }
 
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
 .boton:active {
     background-color: #495057;
 }
