@@ -107,10 +107,20 @@ ul {
     background-color: #495057;
 }
 
-a {
-    color: #007bff;
+li>a {
+    color: #386E72;
     text-decoration: none;
     background-color: transparent;
+}
+
+a [class="btn"] {
+    background-color: #495057;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #495057;
+    border-color: #495057;
 }
 
 .boton:active {
