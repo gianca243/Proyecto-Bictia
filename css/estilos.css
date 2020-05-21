@@ -181,6 +181,10 @@ li>a {
     display: none;
   }
 
+  #carouselExampleInterval {
+    display: none;
+  }
+
   .ul-Style {
     display: none;
   }
@@ -238,4 +242,27 @@ footer {
   font-size: 18px !important;
   font-weight: 800;
   padding-right: 100px;
+}
+
+
+.carousel-inner img {
+  width: 100%;
+  margin: auto;
+  min-height: 200px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.text {
+  text-align: justify;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
 }
