@@ -101,17 +101,11 @@ ul {
     background-color: #495057;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #495057;
-}
-
 .boton:active {
     background-color: #495057;
 }
 
-.boton .boton {
+.boton {
     display: inline-block;
     font-weight: 400;
     color: #495057;
