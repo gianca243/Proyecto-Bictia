@@ -4,266 +4,273 @@
 /* Add a gray background color and some padding to the footer */
 
 .ul-Style ul {
-  width: 200;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-items: center;
-  justify-content: center;
+    width: 200;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
 }
 
 .ul-Style li {
-  /*quitar estilo de viñetas*/
-  list-style: none;
-  padding: 10px 10px 10px 10px;
+    /*quitar estilo de viñetas*/
+    list-style: none;
+    padding: 10px 10px 10px 10px;
 }
 
 .ul-Style li img {
-  /*Tamaño de fondo se expanda*/
-  background-size: cover;
-  /*Borde redondeado*/
-  border-radius: 6px;
-  opacity: .6;
-  width: 35px;
-  height: 35px;
-  /*Para que se tenga transición de un estado a otro*/
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-  animation-delay: scale(1.25) rotateY(180deg);
-  -webkit-transition: all .6s ease;
+    /*Tamaño de fondo se expanda*/
+    background-size: cover;
+    /*Borde redondeado*/
+    border-radius: 6px;
+    opacity: .6;
+    width: 35px;
+    height: 35px;
+    /*Para que se tenga transición de un estado a otro*/
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: scale(1.25) rotateY(180deg);
+    -webkit-transition: all .6s ease;
 }
 
 .ul-Style li img:hover {
-  /*La opacidad va a volver a 1*/
-  opacity: 1;
-  /*que el efecto del borde se note*/
-  border-radius: 200px;
-  /*Cero px en X, cero px en y, 20px de resplandor y un color blanco al final*/
-  box-shadow: 0px 0px 20px rgb(255, 255, 255);
-  /*la propiedad de la amigación, le da la escala y la rotación*/
-  -webkit-transform: scale(1.25) rotate(360deg);
+    /*La opacidad va a volver a 1*/
+    opacity: 1;
+    /*que el efecto del borde se note*/
+    border-radius: 200px;
+    /*Cero px en X, cero px en y, 20px de resplandor y un color blanco al final*/
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    /*la propiedad de la amigación, le da la escala y la rotación*/
+    -webkit-transform: scale(1.25) rotate(360deg);
 }
 
 #containerHeader {
-  background: linear-gradient(-50deg, #386E72 10%, #95c5c8 100%);
-  margin: 0px auto;
+    background: linear-gradient(-50deg, #386E72 10%, #95c5c8 100%);
+    margin: 0px auto;
 }
 
 .colorA {
-  background: linear-gradient(-50deg, #386E72 10%, #95c5c8 100%);
-  margin: 0px auto;
+    background: linear-gradient(-50deg, #386E72 10%, #95c5c8 100%);
+    margin: 0px auto;
 }
 
 li a {
-  font-weight: 450 !important;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 450 !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .titulos {
-  text-shadow: rgba(255, 255, 255, 0.459) 3px 3px, 0 0 1em white, 0 0 0.5em white;
+    text-shadow: rgba(255, 255, 255, 0.459) 3px 3px, 0 0 1em white, 0 0 0.5em white;
 }
 
 .centrar {
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 
 ul {
-  padding-inline-start: 0px !important;
+    padding-inline-start: 0px !important;
 }
 
 
 /********* Navbar **********/
 
 .img-opacidad {
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.329)
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.329)
 }
 
 .icon-float {
-  float: left;
-  width: 12vw;
+    float: left;
+    width: 12vw;
 }
 
 .navbar-color {
-  background-color: rgb(155, 119, 103);
+    background-color: rgb(155, 119, 103);
 }
 
 .boton:hover {
-  color: #fff !important;
-  background-color: #386E72 !important;
-  border-color: #386E72 !important;
+    color: #fff !important;
+    background-color: #386E72 !important;
+    border-color: #386E72 !important;
 }
 
 .botonG:hover {
-  color: #fff !important;
-  background-color: #386E72 !important;
-  border-color: #386E72 !important;
+    color: #fff !important;
+    background-color: #386E72 !important;
+    border-color: #386E72 !important;
 }
 
 .botonG {
-  background-color: rgb(155, 119, 103);
-  display: inline-block;
-  font-weight: 400;
-  color: #495057;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-color: rgb(155, 119, 103);
+    display: inline-block;
+    font-weight: 400;
+    color: #495057;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-  color: #fff;
-  background-color: rgb(155, 119, 103);
+    color: #fff;
+    background-color: rgb(155, 119, 103);
 }
 
 li>a {
-  color: #386E72;
-  text-decoration: none;
-  background-color: transparent;
+    color: #386E72;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: rgb(155, 119, 103);
-  border-color: rgb(155, 119, 103);
+    color: #fff;
+    background-color: rgb(155, 119, 103);
+    border-color: rgb(155, 119, 103);
 }
 
 .boton {
-  display: inline-block;
-  font-weight: 400;
-  color: #495057;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    display: inline-block;
+    font-weight: 400;
+    color: #495057;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 
 /***** CARRUSEL *******/
 
 .carousel-inner img {
-  width: 100%;
-  /* Set width to 100% */
-  margin: auto;
-  min-height: 200px;
+    width: 100%;
+    /* Set width to 100% */
+    margin: auto;
+    min-height: 200px;
 }
 
 #myCarousel {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 
 /* Hide the carousel text when the screen is less than 600 pixels wide */
 
 @media (max-width: 600px) {
-  .carousel-caption {
-    display: none;
-  }
-
-  #carouselExampleInterval {
-    display: none;
-  }
-
-  .ul-Style {
-    display: none;
-  }
+    .carousel-caption {
+        display: none;
+    }
+    #carouselExampleInterval {
+        display: none;
+    }
+    .ul-Style {
+        display: none;
+    }
 }
 
 
 /******** FOOTER **********/
 
 footer {
-  background-color: #f2f2f2;
-  padding: 25px;
+    background-color: #f2f2f2;
+    padding: 25px;
 }
 
 
 /************** CONTENEDORES  *************/
 
 .container-1 {
-  /*background-color: rgba(240, 192, 170, 0.6);*/
-  background-color: #ffffffe3;
-  border-radius: 10px;
-  padding-left: 8px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-right: 8px;
-  margin: 10px;
+    /*background-color: rgba(240, 192, 170, 0.6);*/
+    background-color: #ffffffe3;
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 8px;
+    margin: 10px;
 }
 
 .containerFondo {
-  width: 98%;
-  background-image: url(../Multimedia/Fondo2.png);
-  /* background-size: cover;*/
-  background-attachment: fixed;
-  /*background-repeat: no-repeat;*/
-  background-position: center;
-  padding-left: 4px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-right: 4px;
-  margin: 0px auto;
-  justify-items: center;
-  align-items: center;
-  justify-content: space-between;
+    width: 98%;
+    background-image: url(../Multimedia/Fondo2.png);
+    /* background-size: cover;*/
+    background-attachment: fixed;
+    /*background-repeat: no-repeat;*/
+    background-position: center;
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    margin: 0px auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .containerFondoOpacidad {
-  background-color: rgba(155, 119, 103, 0.514);
-  margin: 0;
-  padding: 0px 0px 0px 0px;
-  align-items: center;
-  justify-content: space-between;
-  justify-items: center;
+    background-color: rgba(155, 119, 103, 0.514);
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
 }
 
 #logueado {
-  font-size: 18px !important;
-  font-weight: 800;
-  padding-right: 100px;
+    font-size: 18px !important;
+    font-weight: 800;
+    padding-right: 100px;
 }
 
-
 .carousel-inner img {
-  width: 100%;
-  margin: auto;
-  min-height: 200px;
+    width: 100%;
+    margin: auto;
+    min-height: 200px;
 }
 
 img {
-  vertical-align: middle;
-  border-style: none;
+    vertical-align: middle;
+    border-style: none;
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .text {
-  text-align: justify;
-  font-family: 'Varela Round',
-    sans-serif;
-  font-size: 14px;
+    text-align: justify;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+}
+
+.navT {
+    text-align: justify;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+}
+
+li a {
+    font-weight: 450 !important;
+    font-family: 'Varela Round', sans-serif;
 }
