@@ -2,14 +2,16 @@
 <html lang="es">
 
 <head>
-  <title>Bootstrap Example</title>
+  <title>Quarantine Times</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="css/estilos.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="./Multimedia/icon.png" type="image/x-icon">
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -44,23 +46,14 @@
             <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">Inicio</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+              <a class="dropdown-item" href="#registro" data-toggle="modal" data-target="#registro">Registrarse</a>
+              <a class="dropdown-item" href="#login" data-toggle="modal" data-target="#login">Iniciar Sesión</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Postres</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Juegos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./Registro.html">Registrarse</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./Sesion.html">Login</a>
           </li>
         </ul>
 
@@ -239,17 +232,190 @@
       </div>
     </div>
   </div>
-
   <!-----------------------------------Fin Contenedor principal full ancho-------------------------------------------->
   <!------------------------ FOOTER ------------------------------>
   <footer class="container-fluid text-center">
-
     <p>Footer Text</p>
-
-
-
   </footer>
 
+
+  <!--------------------------------Modal formulario de registro--------------------------------------->
+  <div class="modal fade " id="registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registrate</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!--------------------------------formulario de registro--------------------------------------->
+
+          <div id="register-alert" class="alert alert-danger" role="alert" hidden></div>
+          <form action="./index.html" id="registro" name="registro" onsubmit="return enviarDatos()">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName">Apellido</label>
+                <input type="text" class="form-control" id="lastName" required>
+              </div>
+            </div>
+
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required autofocus>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="password1">Contraseña</label>
+                <input type="password" class="form-control" id="password1" placeholder="Password" required
+                  minlength="10">
+                <small class="form-text text-muted">Su contraseña debe tener al menos 10
+                  caracteres*</small>
+              </div>
+              <div class="orm-group col-md-4">
+                <label for="password2">Confirmar</label>
+                <input type="password" class="form-control" id="password2" placeholder="Password" required
+                  minlength="10">
+                <small class="form-text text-muted">Confirme su contraseña</small>
+              </div>
+            </div>
+
+
+            <div class="form-row py-2">
+              <div class="form-group col-md-3">
+                <label for="gendre">Género:</label>
+                <select class="form-control" id="gendre" required>
+                  <option value="male" selected>Masculino</option>
+                  <option value="female">Femenino</option>
+                  <option value="other">Otro</option>
+                </select>
+              </div>
+              <div class="form-group col-md-5">
+                <label for="birthdate">Fecha Nacimiento</label>
+                <input type="date" class="form-control" id="birthdate" required>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="tel">Telefono</label>
+                <input class="form-control" type="number" id="tel" min="0" maxlength="10" required>
+              </div>
+              <!--      VALIDANDO CODIGO     -->
+
+              <div class="col-md-6 mb-3">
+                <label for="ciudad">Ciudad</label>
+                <select class="custom-select" id="ciudad" required>
+                  <option selected disabled value="">Buscar...</option>
+                  <option value="Bogotá">Bogota</option>
+                  <option value="Acacías">Acacías</option>
+                  <option value="Cachipae">Cachipae</option>
+                  <option value="Girardot">Girardot</option>
+                </select>
+                <div class="invalid-tooltip">
+                  Please select a valid state.
+                </div>
+              </div>
+
+
+              <div class="col-md-3 mb-3">
+                <label for="departamento">Departamento</label>
+                <select class="custom-select" id="departamento" required>
+                  <option selected disabled value="">Buscar...</option>
+                  <option value="Cundinamarca">Cundinamarca</option>
+                  <option value="Meta">Meta</option>
+                  <option value="Caldas">Caldas</option>
+                  <option value="Casanare">Casanare</option>
+                </select>
+                <div class="invalid-tooltip">
+                  Please select a valid state.
+                </div>
+              </div>
+            </div>
+
+
+            <!--      TERMINANDO CODIGO    -->
+
+
+            <div class="form-group col-md-12">
+              <label for="foto">Agregar Foto de Perfil</label>
+              <input type="file" class="form-control-file btn btn-dark col-md-7" id="foto">
+            </div>
+
+            <div class="form-group py-2">
+              <div class="form-check text-center">
+                <input class="form-check-input" type="checkbox" id="checkTerminos">
+                <label class="form-check-label" for="checkTerminos">
+                  Acepto <a href="#" class="btn-link" data-toggle="modal" data-target="#terminos">Terminos y
+                    Condiciones</a>
+                </label>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark w-75 boton">Sign Up</button>
+            </div>
+            <div class="text-muted text-center pt-3">
+              Ya tienes cuénta ? <a class="nav-link" href="#login" data-toggle="modal" data-target="#login">Iniciar
+                Sesión</a>
+            </div>
+          </form>
+          <!--------------------------------Fin formulario de registro--------------------------------------->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------------Fin Modal formulario de registro--------------------------------------->
+  <!--------------------------------Modal formulario de login--------------------------------------->
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title titulos" id="exampleModalLabel">Iniciar Sesión</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="login-alert" class="alert alert-danger" role="alert" hidden></div>
+
+          <form action="./index.html" id="login" name="login" onsubmit="return validarDatos()">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" required autofocus>
+            </div>
+            <div class="form-group py-2">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark w-75">Sign In</button>
+            </div>
+            <!--
+              <div class="text-muted text-center pt-3">
+                No tiene cuénta ?<a class="nav-link" href="#registro" data-toggle="modal"
+                  data-target="#registro">Registrese Aquí</a>
+              </div>
+            -->
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------------Fin Modal formulario de login--------------------------------------->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>

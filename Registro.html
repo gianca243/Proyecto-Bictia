@@ -5,9 +5,11 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Registro</title>
+     <link rel="shortcut icon" href="./Multimedia/icon.png" type="image/x-icon">
      <link rel="stylesheet" href="./css/estilos.css">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <script src="./js/Registro.js"></script>
      <script src="js/jquery.min.js"></script>
      <script src="js/bootstrap.min.js"></script>
 
@@ -24,7 +26,7 @@
                              <div class="card-body">
                                  <div id="register-alert" class="alert alert-danger" role="alert" hidden></div>
 
-                                 <form action="./index.html" id="register" name="register"
+                                 <form action="./index.html" id="registro" name="registro"
                                      onsubmit="return enviarDatos()">
 
                                      <div class="form-row">
@@ -40,19 +42,27 @@
 
 
                                      <div class="form-row">
-                                         <div class="form-group col-md-6">
+                                         <div class="form-group col-md-4">
                                              <label for="email">Email</label>
                                              <input type="email" class="form-control" id="email" placeholder="Email"
                                                  required autofocus>
                                          </div>
-                                         <div class="form-group col-md-6">
-                                             <label for="password">Password</label>
-                                             <input type="password" class="form-control" id="password"
-                                                 placeholder="Password" required minlength="8">
-                                             <small class="form-text text-muted">Su contraseña debe tener al menos 8
+                                         <div class="form-group col-md-4">
+                                             <label for="password1">Contraseña</label>
+                                             <input type="password" class="form-control" id="password1"
+                                                 placeholder="Password" required minlength="10">
+                                             <small class="form-text text-muted">Su contraseña debe tener al menos 10
                                                  caracteres*</small>
                                          </div>
+                                         <div class="orm-group col-md-4">
+                                             <label for="password2">Confirmar</label>
+                                             <input type="password" class="form-control" id="password2"
+                                                 placeholder="Password" required minlength="10">
+                                             <small class="form-text text-muted">Confirme su contraseña</small>
+                                         </div>
                                      </div>
+
+
                                      <div class="form-row py-2">
                                          <div class="form-group col-md-3">
                                              <label for="gendre">Género:</label>
@@ -74,8 +84,8 @@
                                          <!--      VALIDANDO CODIGO     -->
 
                                          <div class="col-md-6 mb-3">
-                                             <label for="Ciudad">Ciudad</label>
-                                             <select class="custom-select" id="Ciudad" required>
+                                             <label for="ciudad">Ciudad</label>
+                                             <select class="custom-select" id="ciudad" required>
                                                  <option selected disabled value="">Buscar...</option>
                                                  <option value="Bogotá">Bogota</option>
                                                  <option value="Acacías">Acacías</option>
@@ -89,8 +99,8 @@
 
 
                                          <div class="col-md-3 mb-3">
-                                             <label for="Departamento">Departamento</label>
-                                             <select class="custom-select" id="Departamento" required>
+                                             <label for="departamento">Departamento</label>
+                                             <select class="custom-select" id="departamento" required>
                                                  <option selected disabled value="">Buscar...</option>
                                                  <option value="Cundinamarca">Cundinamarca</option>
                                                  <option value="Meta">Meta</option>
@@ -105,50 +115,50 @@
 
 
                                      <!--      TERMINANDO CODIGO    -->
-                             </div>
-
-                             <div class="form-group col-md-12">
-                                 <label for="file">Agregar Foto de Perfil</label>
-                                 <input type="file" class="form-control-file btn btn-dark col-md-7
-                                 id=" exampleFormControlFile1">
-                             </div>
 
 
+                                     <div class="form-group col-md-12">
+                                         <label for="foto">Agregar Foto de Perfil</label>
+                                         <input type="file" class="form-control-file btn btn-dark col-md-7" id="foto">
+                                     </div>
 
-                             <div class="form-group py-2">
-                                 <div class="form-check text-center">
-                                     <input class="form-check-input" type="checkbox" id="checkTerminos">
-                                     <label class="form-check-label" for="checkTerminos">
-                                         Acepto <a href="#" class="btn-link" data-toggle="modal"
-                                             data-target="#terminos">Terminos y Condiciones</a>
-                                     </label>
-                                 </div>
-                             </div>
+                                     <div class="form-group py-2">
+                                         <div class="form-check text-center">
+                                             <input class="form-check-input" type="checkbox" id="checkTerminos">
+                                             <label class="form-check-label" for="checkTerminos">
+                                                 Acepto <a href="#" class="btn-link" data-toggle="modal"
+                                                     data-target="#terminos">Terminos y Condiciones</a>
+                                             </label>
+                                         </div>
+                                     </div>
 
-                             <div class="text-center">
-                                 <button type="submit" class="btn btn-dark w-75 boton">Sign Up</button>
+                                     <div class="text-center">
+                                         <button type="submit" class="btn btn-dark w-75 boton">Sign Up</button>
+                                     </div>
+                                     <div class="text-muted text-center pt-3">
+                                         Ya tienes cuénta ? <a href="./sesion.html">inicia sesión</a>
+                                     </div>
+                                 </form>
                              </div>
-                             <div class="text-muted text-center pt-3">
-                                 Ya tienes cuénta ? <a href="./sesion.html">inicia sesión</a>
-                             </div>
-                             </form>
                          </div>
                      </div>
                  </div>
+
              </div>
-
          </div>
-     </div>
 
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-     </script>
-     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-     </script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-     </script>
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+             crossorigin="anonymous">
+         </script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+             crossorigin="anonymous">
+         </script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+             integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+             crossorigin="anonymous">
+         </script>
 
  </body>
 
