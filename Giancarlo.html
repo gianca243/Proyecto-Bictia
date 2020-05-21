@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="./css/estilos.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="./Multimedia/icon.png" type="image/x-icon">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- johan head -->
     <link rel="stylesheet" href="./Estilos/giancarlo.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <title>Document</title>
@@ -19,66 +20,55 @@
 <body>
 
     <!--------------------------------Contenedor Header--------------------------------------->
-    <div class="jumbotron">
-        <div class="container text-center">
-            <h1>Online Store</h1>
-            <p>Mission, Vission & Values</p>
+    <header>
+        <div class="jumbotron" id="containerHeader">
+            <div class="container text-center">
+                <div class=" ul-Style centrar">
+                    <ul>
+                        <li><img src="./Multimedia/home.png"></li>
+                        <li><img src="./Multimedia/planta.png"></li>
+                        <li><img src="./Multimedia/postres.png"></li>
+                        <li><img src="./Multimedia/galeria.png"></li>
+                        <li><img src="./Multimedia/control.png"></li>
+                    </ul>
+                </div>
+                <h1 class="titulos">Quarantine Times</h1>
+                <h6 class="titulos">Creando y aprendiendo en casa</p>
+            </div>
         </div>
-    </div>
-    <!--------------------------------Fin Contenedor Header--------------------------------------->
-    <!--------------------------------Contenedor Barra de Navegacion--------------------------------------->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-color sticky-top">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
-                </li>
+        <!--------------------------------Fin Contenedor Header--------------------------------------->
+        <!--------------------------------Contenedor Barra de Navegacion--------------------------------------->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-color sticky-top">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
 
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cultivar</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Galeria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Postres</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Juegos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Registrarse</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Iniciar Sesión</a>
-                </li>
-            </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Catherin.html">Postres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Juegos</a>
+                    </li>
+                </ul>
 
 
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Redactar" aria-label="Search">
-                <button class="boton" type="submit">Buscar</button>
-            </form>
-        </div>
-    </nav>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Redactar" aria-label="Search">
+                    <button class="boton" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
     <!--------------------------------Fin Contenedor Barra de Navegacion--------------------------------------->
     <!-----------------------------------Contenedor principal full ancho-------------------------------------------->
     <div class="container-fluid text-justify">
-        <h1 class="text-center">Video Juegos</h1>
-        <h3>Categoria:</h3>
-        <p>Agricultura</p>
+
         <hr>
         <div class="row">
             <div class="col-sm-8 text-left">
@@ -240,45 +230,46 @@
 
 
         <!-----------------------------------Fin Contenedor principal full ancho-------------------------------------------->
-        <footer class="container-fluid text-center">
-            <div class="row">
-                <div class="col-sm-8">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <i class="fab fa-github fa-3x"></i>
-                            <br>
-                            <a href="https://github.com/jsanchez421">jsanchez421</a>
-                            <p>Johan Sebastian Sanchez Roman</p>
-                            <a href="https://github.com/catherinp">catherinp</a>
-                            <p>Yuly Catherin prieto</p>
-                            <a href="https://github.com/gianca243">gianca243</a>
-                            <p>Diego Giancarlo Zapata Cortés</p>
-                            <a href="https://github.com/JaviVillamil">JaviVillamil</a>
-                            <p>Nelson Javier Villamil Pardo</p>
-                        </div>
-                        <div class="col-md-6">
-                            <i class="fas fa-at fa-3x"></i>
-                            <p>ings.jsanchezr@gmail.com</p>
-                            <p>ycatherinprietov@gmail.com</p>
-                            <p>gianca243@gmail.com</p>
-                            <p>nefoja@gmail.com</p>
-                        </div>
+
+
+    </div>
+    <footer class="container-fluid text-center colorA">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <i class="fab fa-github fa-3x"></i>
+                        <br>
+                        <a href="https://github.com/jsanchez421">jsanchez421</a>
+                        <p>Johan Sebastian Sanchez Roman</p>
+                        <a href="https://github.com/catherinp">catherinp</a>
+                        <p>Yuly Catherin prieto</p>
+                        <a href="https://github.com/gianca243">gianca243</a>
+                        <p>Diego Giancarlo Zapata Cortés</p>
+                        <a href="https://github.com/JaviVillamil">JaviVillamil</a>
+                        <p>Nelson Javier Villamil Pardo</p>
                     </div>
+                    <div class="col-md-6">
+                        <i class="fas fa-at fa-3x"></i>
+                        <p>ings.jsanchezr@gmail.com</p>
+                        <p>ycatherinprietov@gmail.com</p>
+                        <p>gianca243@gmail.com</p>
+                        <p>nefoja@gmail.com</p>
+                    </div>
+                </div>
 
-                </div>
-                <div class="col-sm-4 sidenav">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8928.077793198656!2d-74.11860816975397!3d4.592844990245274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1589835453664!5m2!1ses!2sco" frameborder="0" style="border:0;max-width: 100%;height: 100%;"
-                        allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
             </div>
-        </footer>
+            <div class="col-sm-4 sidenav">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8928.077793198656!2d-74.11860816975397!3d4.592844990245274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1589835453664!5m2!1ses!2sco" frameborder="0" style="border:0;max-width: 100%;height: 100%;"
+                    allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </footer>
 
 
-
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 
 </html>
