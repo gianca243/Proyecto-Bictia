@@ -1,3 +1,13 @@
+// Declarar variables Locales//
+
+var nombre = "";
+var usuario = "";
+var password = "";
+var email = "";
+var lusuario = "";
+var lpassword = "";
+
+// Metodo para validar los datos y cargarlos al LocalStorage
 function enviarDatos() {
     let validado = true
     let mensaje = ''
@@ -67,4 +77,53 @@ function enviarDatos() {
 
     }
     return validado;
+}
+
+
+// Función para el Logeo de sesión, validando los datos con el LocalStorage
+
+function login() {
+    //.............guardo los datos del formulario de login en variables...........
+    lusuario = document.getElementById('lusuario').value;
+    lpassword = document.getElementById('lpassword').value;
+
+    var datos = JSON.parse(localStorage.getItem('datos'));
+    usuario = datos['email'];
+    password = datos['password1'];
+    nombre = datos['nombre'];
+
+    if (usuario == lusuario) //comparo variables usuario
+    {
+        if (password == lpassword) { //comparo variables password
+            let sesion = { //Se crean dos variables cuando la sesión se activa
+                nombre,
+                usuario,
+            };
+            localStorage.setItem('sesion', JSON.stringify(sesion))
+            $('#logueado').html("Bienvenido " + nombre);
+            document.getElementById("ocultar_login").hidden = false;
+            document.getElementById("ocultar_sesion").hidden = true;
+            alert("Bienvenido " + nombre); //si todo es correcto
+            document.getElementById("lcerrar").click();
+        } else {
+            alert("Contraseña incorrecta"); //si contraseña incorrecta
+        }
+    } else {
+        alert("Usuario desconocido"); //si usuario incorrecto
+    }
+    //...............cierro la ventana del modal de registro...............
+}
+
+// Comprobar si existe el objeto datos y trae variable nombre y agrega el texto a logueado
+function sesion() {
+    if (localStorage.getItem('sesion')) {
+        var sesion = JSON.parse(localStorage.getItem('sesion'));
+        nombre = sesion['nombre'];
+        $('#logueado').html("Bienvenido " + nombre);
+    }
+}
+
+function finsesion() {
+    localStorage.clear();
+    location.reload();
 }

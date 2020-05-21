@@ -10,14 +10,13 @@
   <link href="css/estilos.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="./Multimedia/icon.png" type="image/x-icon">
   <script src="./js/funciones_.js"></script>
-  <script src="./js/login.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="sesion()">
   <!--------------------------------Contenedor Header--------------------------------------->
   <header>
     <div class="jumbotron" id="containerHeader">
@@ -52,7 +51,9 @@
               aria-haspopup="true" aria-expanded="false">Inicio</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#registro" data-toggle="modal" data-target="#registro">Registrarse</a>
-              <a class="dropdown-item" href="#login" data-toggle="modal" data-target="#login">Iniciar Sesión</a>
+              <a id="ocultar_sesion" class="dropdown-item" href="#login" data-toggle="modal"
+                data-target="#login">Iniciar Sesión</a>
+              <a id="ocultar_login" class="dropdown-item" onclick="finsesion()" hidden>Cerrar Sesión</a>
             </div>
           </li>
           <li class="nav-item">
