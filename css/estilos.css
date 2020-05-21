@@ -263,6 +263,7 @@ img {
 
 .text {
   text-align: justify;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Varela Round',
+    sans-serif;
   font-size: 14px;
 }
